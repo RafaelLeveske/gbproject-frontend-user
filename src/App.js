@@ -9,20 +9,17 @@ function App() {
     api.get('products').then(response => {
       setProducts(response.data);
       console.log(response.data);
-    })
+    });
   }, []);
-
 
   return (
     <div>
-      {products.map(product => {
-        return (
+      {products.map(product => (
         <div key={product.id}>
           <h1>{product.title}</h1>
           <p>{product.description}</p>
         </div>
-        );
-      })}
+      ))}
     </div>
   );
 }
