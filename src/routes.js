@@ -7,6 +7,7 @@ import NewProfessor from './pages/NewProfessor';
 import NewStudent from './pages/NewStudent';
 import ProfessorProfile from './pages/ProfessorProfile';
 import StudentProfile from './pages/StudentProfile';
+import UserRegister from './pages/UserRegister';
 
 export default function Routes() {
   return (
@@ -17,6 +18,7 @@ export default function Routes() {
         <Route path="/student/new" component={NewStudent} />
         <Route path="/profile/professor" component={ProfessorProfile} />
         <Route path="/profile/student" component={StudentProfile} />
+        <Route path="/user/register" component={UserRegister} />
       </Switch>
     </BrowserRouter>
   );
