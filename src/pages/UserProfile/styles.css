@@ -5,9 +5,23 @@
   margin: 32px auto;
 }
 
+.profile-container .content {
+  width: 100%;
+  padding: 100px;
+  background: #f0f0f5;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 155px;
+}
+
 .profile-container header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .profile-container header span {
@@ -25,17 +39,19 @@
   margin-top: 0;
 }
 
-.profile-container header button {
-  height: 60px;
-  width: 60px;
-  border-radius: 4px;
+.profile-container .content .button {
+  height: 100px;
+  width: 400px;
+  border-radius: 8px;
   border: 1px solid #dcdce6;
-  background: transparent;
-  margin-left: 16px;
   transition: border-color 0.2s;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 15px;
+  justify-content: center;
 }
 
-.profile-container header button:hover {
+.profile-container .button:hover {
   border-color: #999;
 }
 
