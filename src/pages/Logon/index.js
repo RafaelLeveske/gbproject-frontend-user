@@ -14,12 +14,14 @@ export default function Logon() {
     e.preventDefault();
 
     try {
-      await api.post('users_sessions', { email, password });
+      const response = await api.post('users_sessions', { email, password });
 
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPassord', password);
+      localStorage.setItem('userName', response.data.name);
+      localStorage.setItem('userId', response.data.id);
 
-      history.push('/profile/professor');
+      history.push('/profile');
     } catch (err) {
       alert('Falha no login, tente novamente.');
     }
@@ -49,7 +51,7 @@ export default function Logon() {
 
             <Link className="back-link" to="/user/register">
               <FiLogIn size={16} color="#E02041" />
-              Não tenho cadastro
+              Cadastrar novo usuário
             </Link>
           </form>
         </section>

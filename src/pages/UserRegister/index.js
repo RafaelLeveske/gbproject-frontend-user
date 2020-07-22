@@ -8,7 +8,6 @@ export default function UserRegister() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [graduation, setGraduation] = useState('');
 
   const history = useHistory();
 
@@ -19,7 +18,6 @@ export default function UserRegister() {
       name,
       email,
       password,
-      graduation,
     };
     try {
       await api.post('users', data);
@@ -62,14 +60,6 @@ export default function UserRegister() {
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
-
-          <div className="input-group">
-            <input
-              placeholder="Graduação"
-              value={graduation}
-              onChange={e => setGraduation(e.target.value)}
-            />
-          </div>
 
           <button className="button" type="submit">
             Cadastrar
